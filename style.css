@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; }
+body {
+    max-width: 100%;
+    font-family: Poppins; }
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Light.ttf); }
+@font-face {
+    font-family: PoppinsBold;
+    src: url(Poppins-Black.ttf); }
+nav {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 5; }
+nav .logo {
+    color: rgb(111, 190, 0);
+    float: left;
+    display: block;
+    padding: 0px 35px;
+    font-size: 3em; }
+nav a {
+    color: rgb(111, 190, 0);
+    float: right;
+    display: block;
+    padding: 20px 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.5s ease; }
+nav a:hover {
+    font-size: 1.25em; }
+nav:hover a:not(:hover) {
+    color: rgb(111, 190, 0);
+    opacity: 0.3;
+    filter: blur(1px); }
+.guia { 
+    display: block;
+    float: left;
+    width: 100%;
+    height: 70px;
+    padding: 17px 140px; }
+.guiatxt {
+    padding: 30px 275px; font-size: 1.4em; }
+.card {
+    width: auto;
+    height: auto;
+    margin: 10px 300px;
+    border-collapse: separate;
+    border-spacing: 0 50px; }
+.row {
+    margin: 50px; }
+.face {
+    height: 210px;
+    width: 300px;
+    background-color: rgb(43, 43, 43);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 3em;
+    transition: 0.3s ease-in-out; }
+.face1 {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 0px #e2e2e2;
+    position: relative;
+    width: 1000px;
+    height: 170px;
+    padding: 20px;
+    font-size: 1em; }
+.face1::after,.face1::before {
+    content: "";
+    position: absolute;
+    bottom: 0; top: 0; left: 0; right: 0;
+    transition: width 0.3s ease-in-out; }
+.face1::before {
+    border-right: 1px solid black;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-in-out; }
+.face1::after {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 0%; }
+.face1:hover::after {
+    width: 100%; }
+.face1:hover::before {
+    transform: scaleY(1); }
+.row:hover .face {
+    color: rgb(111, 190, 0); }
+#cardlocais {
+    width: 100%;
+    height: 90vh;
+    display: block; }
+.locais {
+    font-family: PoppinsBold;
+    font-size: 4em;
+    text-decoration: none;
+    color: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 70px;
+    transition: 0.3s ease; }
+.locais:hover {
+    font-size: 5em; }
+.displaylocais {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+.locaistitulo {
+    display: flex;
+    justify-content: center;
+    margin: 85px;
+    font-size: 2.5em; }
+.h1hover {
+    color: rgb(43, 43, 43);
+    transition: 0.3s ease; }
+#cardlocais:hover .h1hover {
+    color: rgb(111, 190, 0); }
+#quemsomos {
+    display: flex;
+    height: auto;
+    width: 100%; }
+.quemsomostitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 1.7em;
+    color: #fff; }
+.quemsomosdisplay {
+    display: block;
+    width: 50%;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 13px;
+    background-color: rgb(43, 43, 43); }
+.h2hover {
+    color: #fff;
+    transition: 0.3s ease; }
+#quemsomos:hover .h2hover {
+    color: rgb(111, 190, 0); }
+.intbox {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+.intunit {
+    width: 400px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+    color: #fff; }
+.intunit:hover {
+    font-size: 1.7em;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+.icon {
+	display: inline-flex;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+	font-size: 26px;
+	color: #fff;
+	border-radius: 50%;
+	outline: 2px solid #fff;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+    margin: 50px 10px; }
+.icon:hover {
+	outline-offset: 4px; }
+.icon i {
+	margin: auto; }
+.icon:hover i {
+	animation: shake 0.25s; }
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76; }
+.icon--twitter:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2; }
+.icon--linkedin:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5; }
+.icon--github:hover {
+	background-color: #2ea44f;
+	outline-color: #2ea44f; }
